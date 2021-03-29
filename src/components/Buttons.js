@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const Buttons = () => {
+const Buttons = (props) => {
   return (
     <section>
       <button> All </button>
-      <button> Sports </button>
-      <button> Gigs </button>
-      <button> Comedy </button>
+      <button onClick= {(event) => {props.setFilter("sports")}} </section>>Sports
+      <button> Music </button>
+      <button> Arts & Theatre </button>
     </section>
   );
 };
