@@ -1,11 +1,12 @@
-import React from 'react';
-import EventCard from './EventCard';
+import React from "react";
+import EventCard from "./EventCard";
+import Container from "react-bootstrap/Container";
 
 const EventList = ({ events, filter }) => {
   console.log(filter);
   if (!filter.length) {
     return (
-      <div>
+      <div className="events-list-div">
         {events.map(
           ({ id, dates, name, url, images, _embedded, classifications }) => {
             const genre = classifications[0].segment.name;
@@ -28,7 +29,7 @@ const EventList = ({ events, filter }) => {
     );
   } else {
     return (
-      <div>
+      <div className="events-list-div">
         {events.map(
           ({ id, dates, name, url, images, _embedded, classifications }) => {
             const genre = classifications[0].segment.name;

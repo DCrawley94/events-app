@@ -1,39 +1,43 @@
-import React from 'react';
+import React from "react";
+import Button from "react-bootstrap/Button";
 
 const Buttons = (props) => {
   return (
     <section>
-      <button
-        onClick={(event) => {
-          props.setFilter('');
+      <Button
+        variant="outline-primary"
+        onClick={() => {
+          props.setFilter("");
         }}
       >
-        {' '}
-        All{' '}
-      </button>
-      <button
-        onClick={(event) => {
-          props.setFilter('Sports');
+        All
+      </Button>
+
+      <Button
+        variant="danger"
+        onClick={() => {
+          props.setFilter("Sports");
         }}
       >
         Sports
-      </button>
-      <button
-        onClick={(event) => {
-          props.setFilter('Music');
+      </Button>
+
+      <Button
+        variant="success"
+        onClick={() => {
+          props.setFilter("Music");
         }}
       >
-        {' '}
-        Music{' '}
-      </button>
-      <button
-        onClick={(event) => {
-          props.setFilter('Arts & Theatre');
+        Music
+      </Button>
+      <Button
+        variant="info"
+        onClick={() => {
+          props.setFilter("Arts & Theatre");
         }}
       >
-        {' '}
-        Arts & Theatre{' '}
-      </button>
+        Arts & Theatre
+      </Button>
     </section>
   );
 };
