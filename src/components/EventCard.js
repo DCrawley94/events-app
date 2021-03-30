@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const EventCard = (props) => {
   return (
@@ -11,6 +11,7 @@ const EventCard = (props) => {
       <p>
         buy your tickets <a href={props.buyTickets}> here </a>
       </p>
+      <p>{props.genre}</p>
     </div>
   );
 };
